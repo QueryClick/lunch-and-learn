@@ -81,4 +81,93 @@ Let's do some examples to explain better:
 This will return `object`.
 3. Check if the array is an instance of `Array`: `console.log(fruits instanceof Array);`   
 This will return `true`.
- 
+
+### Conditional Statements
+[Source Code](conditional-statements.js)   
+[Learn More](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)   
+
+We use conditional statements to perform different actions depending if certain conditions were met.   
+
+We as humans do this everyday - If we want coffee from a coffee shop, we first check **if** we have enough money. If we do have enough money, we will go and buy the coffee. If we do not have enough money, we can't buy the coffee :(   
+
+Another example? When we're commuting to work on the train, each time the train stops, we quickly check if it is our stop. If it is our stop, we get off the train. If it is not our stop, we remain on the train until it is our stop!   
+
+The most commonly used way of doing conditional statements is using `if/else`. Let's understand `if` first:   
+To write an if conditional statement, we first write `if`, followed by parentheses: `if()`. Within the parentheses is where we check if a conditon is `true` or `false`. After the parentheses, we have a set of curly braces, which we write our code in that will only be executed if the conditon is met!   
+
+**Let's write some example:**   
+Remember we spoke about Booleans? A simple variable with a Boolean value will work great for this example. First, let's create the variable.
+```JavaScript
+var employed = true;
+``` 
+So in this variable, we're saying that we are employed. Let's write our `if` statement to check this is true:
+
+```JavaScript
+if(employed) {
+    console.log('You are employed!');
+}
+```
+If you ran both snippets of code, you will get the message `You are employed!`. The `if` statmenet is checking if the value passed is true or false. But what if you weren't employed? Nothing would print... This is where `else` comes in. Let's amend the code above:
+```JavaScript
+if(employed) {
+    console.log('You are employed!');
+} else {
+    console.log('You are not employed!');
+}
+```
+If you change the variable `employed` value to false, it will show the message `You are not employed!`. There is one last way of working with `if/else` and it is `else if()`. If the first condition isn't met, we can do another check before falling back to `else`. Let's create a new scenario.   
+We want to check what a users favourite colour is. Let's first define the users favourite colour!   
+```JavaScript
+var colour = 'red';
+```
+So we now have a variable called `colour` that has a value `red`, which is a type of `String`. Of course in a real-world application, this would be user input and we wouldn't know the value yet! We want to check what colour the user has set:   
+We first check if their favourite is blue. We then check if it is red, lastly we give up!   
+```JavaScript
+if(colour == 'blue') {
+    console.log('Users favourite colour is blue!');
+} else if(colour == 'red') {
+    console.log('Users favourite colour is red!');
+} else {
+    console.log('I have no clue.');
+```
+Since we set the colour as red, if you run these snippets you will have a message saying `Users favourite colour is red!`.   
+Notice I used `==` this time? Let's talk about Comparison Operators!   
+**Comparison Operators** are used in conditonal statements to determine equality or difference between variables or values. Here is a table of different comparison operators:   
+
+| Operator | Description | Example|
+| --- | --- | --- |
+| `==` | is equal to value | `name == 'aaron'` |
+| `===` | is equal to value and type | `age === 25` |
+| `!=` | is not equal to value | `age != 25` |
+| `!==` | is not equal to value and type | `age !== 25` |
+| `>` | is greater than | `age > 24` |
+| `<` | is less than | `age < 26` |
+| `>=` | is greater than or equal to | `age >= 25` |
+| `<=` | is less than or equal to | `age <= 25` |
+
+One comparison operator that confuses people is the difference between `==` and `===`. Let's explain it a bit more:   
+Let's make a variable with our age:
+```JavaScript
+var age = 25;
+```
+We have created a variable with a value of `25`, which is a type of `Number`. If we had to check if a users age is equal to 25:
+```JavaScript
+if(age == '25') // Will return true
+```
+This will return true even though we're checking a `Number` against a `String`. This is because `==` is checking if a value is true. However, if we changed the double euqals (`==`) to triple equals (`===`), this will return false. 
+```JavaScript
+if(age === '25') // Will return false
+```
+If we change the `'25'` (String) to `25` (Number), this condition will finally be met!
+```JavaScript
+if(age === 25) // Will return true
+```
+This is because `===` is checking if the value and type is met. The value is 25, and the data type is a `Number` so it passes!
+
+**Logical Operators**   
+Logical operators checks two values, and returns accordingly. There are three logical operators to talk about:
+| Operator | Description | Example|
+| --- | --- | --- |
+| `&&` | checks if value 1 `AND` value 2 are met | `name === 'Aaron' && age === 25` |
+| `||` | checks if value 1 `OR` value 2 is met | `name === 'Aaron' ǀǀ name === 'James'` |
+| `!` | checks if value is not met | `!employed` |
