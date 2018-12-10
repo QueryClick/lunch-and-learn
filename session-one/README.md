@@ -25,6 +25,8 @@ In the first session, we covered a bunch of important areas. This file will cove
     * What is synchronous code
     * A basic example of asynchronous code
 
+**Note:** `console.log();` allows for you to log values to the console (terminal if Node.js). This is used for quickly seeing what the value is. You can find more about the Console object [here](https://developer.mozilla.org/en-US/docs/Web/API/Console).
+
 ### Variables
 [Source Code](variables.js)   
 [Learn More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)   
@@ -52,6 +54,19 @@ Primitives are also immutable. They cannot be altered. You can reassign the vari
 **Objects**   
 Objects are a data structure containting data and instructions on how to work with the data.   
 Objects have propeties, which have a name (key) and a value. The value can be different data types, and even a function (which is typically called a method if referenced inside of an object).   
+Objects in JavaScript are similar to objects in real life! Let's create an object scenario:   
+I have a car. The car is the object! The car is made up of key information (properties) such as `make, model, colour, seats`. These keys have values such as black, 5 etc. Let's make our object!
+
+```JavaScript
+var car = {
+    make: 'Citroen',
+    model: 'DS3',
+    colour: 'Black',
+    seats: 5 
+};
+
+```
+
 [Learn more about objects here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
 
 #### Arrays
