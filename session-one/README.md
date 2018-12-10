@@ -170,5 +170,5 @@ Logical operators checks two values, and returns accordingly. There are three lo
 | Operator | Description | Example|
 | --- | --- | --- |
 | `&&` | checks if value 1 `AND` value 2 are met | `name === 'Aaron' && age === 25` |
-| `||` | checks if value 1 `OR` value 2 is met | `name === 'Aaron' ǀǀ name === 'James'` |
+| `ǀǀ` | checks if value 1 `OR` value 2 is met | `name === 'Aaron' ǀǀ name === 'James'` |
 | `!` | checks if value is not met | `!employed` |
