@@ -165,7 +165,8 @@ if(age === 25) // Will return true
 This is because `===` is checking if the value and type is met. The value is 25, and the data type is a `Number` so it passes!
 
 **Logical Operators**   
-Logical operators checks two values, and returns accordingly. There are three logical operators to talk about:
+Logical operators checks two values, and returns accordingly. There are three logical operators to talk about:   
+
 | Operator | Description | Example|
 | --- | --- | --- |
 | `&&` | checks if value 1 `AND` value 2 are met | `name === 'Aaron' && age === 25` |
