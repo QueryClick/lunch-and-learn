@@ -198,4 +198,29 @@ function name(usersName) {
 }
 name('Jimmy'); // Will log message 'Hello, Jimmy'
 ```
-Have a look at the [functions.js](functions.js) file for more examples!  
+Have a look at the [functions.js](functions.js) file for more examples!
+
+### Loops
+[Source Code](loops.js)   
+[Learn More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)  
+
+Loops are a quick and easy way to do something repeatedly. There are different types of loops for doing different things. A common and good starting loop is the `for` loop.  
+The `for` loop evaluates specified conditons until they're false. Let's create an example to illustrate how a `for` loop works.  
+We have an array of users.
+```JavaScript
+var users = ['Aaron', 'Ross', 'Steven'];
+```
+We want to display each users name until there is no more users to show. Let's create the conditons!
+```JavaScript
+for(var i = 0; i < users.length; i++) {
+    console.log(users[i]); // Will log Aaron, Ross, Steven
+}
+```
+Okay let's break down what just happened:
+* First, we create a for loop - `for()`
+* Within the parentheses, we do three things:
+    * Create a variable named `i` and assign value 0
+    * We check if the value of `i` is less than the length of the `users` array. We do this by using the `length` property.
+    * Lastly, if this condition is met, we add 1 on to the variable `i` by using `i++` (increments value).
+* Within the curly braces, we log the `users` array. Since we are incrementing the value of `i` every time the loop is true, and since arrays start at `0`, we know what our key will be each iteration, so we just pass `i` as the key: `users[i]`. As soon as the condition is false, the loop will stop.   
+Have a look at the [loops.js](loops.js) file for more examples!
