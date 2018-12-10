@@ -8,7 +8,7 @@ Although this repository is developed using JavaScript, most logic will be possi
 The structure of this series is split in to three sessions. Each session will be listed below, with a brief outline.
 
 ### Session One
-The code and documentation from the first session can be viewed [here](session-1). 
+The code and documentation from the first session can be viewed [here](session-one). 
 
 **Outline of first session**: 
 
