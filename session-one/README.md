@@ -172,3 +172,30 @@ Logical operators checks two values, and returns accordingly. There are three lo
 | `&&` | checks if value 1 `AND` value 2 are met | `name === 'Aaron' && age === 25` |
 | `ǀǀ` | checks if value 1 `OR` value 2 is met | `name === 'Aaron' ǀǀ name === 'James'` |
 | `!` | checks if value is not met | `!employed` |
+
+### Functions
+[Source Code](functions.js)   
+[Learn More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)   
+Functions are great for many reasons! One reason you may use a function is to wrap logic that can only be used when a function is called. This allows for you to write something once, and then just use that function rather than rewriting logic many times!   
+A function is defined with the `function` keyword, followed by a `name`, followed by parentheses `()`. Let's create a basic function:   
+```JavaScript
+function name() {
+    console.log('Hello, Aaron!');
+}
+```
+To actually use this function, we have to call it! You can call a function by simply typing the name of the function:
+```JavaScript
+name(); // Will log message 'Hello, Aaron!'
+```
+This function is pretty useless. What happens if we do not know the users name? Luckily, we can pass information to the function! We pass arguments by having information within the function call:
+```JavaScript
+name('Aaron');
+```
+We now need to edit our actual function to be able to use this argument. Within our parentheses, we list our functions parameters. We add one called `name`. You can call it whatever you want though. Let's see how this will work now!
+```JavaScript
+function name(usersName) {
+    console.log('Hello,', usersName);
+}
+name('Jimmy'); // Will log message 'Hello, Jimmy'
+```
+Have a look at the [functions.js](functions.js) file for more examples!  
