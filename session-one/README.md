@@ -1,6 +1,7 @@
 # Lunch and Learn: Session One
 
 ## Outline of first session
+In the first session, we covered a bunch of important areas. This file will cover what we did, and give you more resources to learn for each part. View the relevant files for source code.
 
 * Variables
     * What is a variable
@@ -52,4 +53,17 @@ Primitives are also immutable. They cannot be altered. You can reassign the vari
 Objects are a data structure containting data and instructions on how to work with the data.   
 Objects have propeties, which have a name (key) and a value. The value can be different data types, and even a function (which is typically called a method if referenced inside of an object).   
 [Learn more about objects here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
+
+#### Arrays
+[Learn more about arrays here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). 
+
+An Array is an object. Arrays can be super useful for storing large amounts of data to a single variable.   
+The important thing to remember here is that an array is a type of object, but is an instance of Array (which is a global object).  
+
+Let's do some examples to explain better:    
+1. Create an array: `var fruits = ['apple', 'banana', 'orange'];`
+2. Check the type of that array: `console.log(typeof fruits);`   
+This will return `object`.
+3. Check if the array is an instance of `Array`: `console.log(fruits instanceof Array);`   
+This will return `true`.
  
