@@ -224,3 +224,23 @@ Okay let's break down what just happened:
     * Lastly, if this condition is met, we add 1 on to the variable `i` by using `i++` (increments value).
 * Within the curly braces, we log the `users` array. Since we are incrementing the value of `i` every time the loop is true, and since arrays start at `0`, we know what our key will be each iteration, so we just pass `i` as the key: `users[i]`. As soon as the condition is false, the loop will stop.   
 Have a look at the [loops.js](loops.js) file for more examples!
+
+### Async
+[Source Code](async.js)   
+[Learn More](https://eloquentjavascript.net/11_async.html) 
+
+It is common in software development to write code synchronously. Synchronous code is coordinated in time. Each line will be executed from top to bottom, and each line will have to finish executing before the next one can start. Sometimes synchronous code is the only valuable option. However, imagine if one of your lines of code could take a few seconds to finish executing... this could make a user have to wait for something to finish before seeing something else. This isn't good. This is where asynchronous programming comes in!   
+Asynchronous still executes line by line, but rather than waiting for the line to finish, it will pass the line of code to the event loop, and then will use an implicit `Promise` to return its result. This would allow for the rest of the application to continue without being blocked.   
+ 
+We humans typically perform tasks asynchronously to be a little more efficient. Let's look at another, real-life exmaple:   
+
+It's dinner time! You are cooking tomato pasta tonight.   
+We know that the pasta takes 20 minutes to cook, and that the sauce takes 10 minutes to prepare and 10 minutes to cook.   
+It would be pretty silly if we started to cook the pasta, and then just stared at it until it was ready and then started to prepare and then cook our sauce! That would mean we cannot eat for at least 40 minutes! This would be synchronous.   
+
+What we would normally do is start cooking the pasta, and then start to prepare the sauce. Once our sauce is prepared, we start to cook our sauce. Once our sauce is cooked, our pasta should be done! Dinner only took around 20 minutes!   
+
+Asynchronous doesn't make your code faster. Your code still takes the same amount of time to execute, but it happens in a more efficient way without blocking us from doing anything else.
+
+Have a look at the [async.js](async.js) file for more examples!
+
