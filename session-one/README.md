@@ -3,24 +3,24 @@
 ## Outline of first session
 In the first session, we covered a bunch of important areas. This file will cover what we did, and give you more resources to learn for each part. View the relevant files for source code.
 
-* Variables
+* [Variables](#Variables)
     * What is a variable
     * How to declare a variable
     * Different data types in JavaScript
-* Conditional Statements
+* [Conditional Statements](#Conditional-Statements)
     * What is conditional statements
     * How to write a basic conditional statement
     * Different ways of using conditional statements
-* Functions
+* [Functions](#Functions)
     * What is a function
     * How to write a function
     * How to pass arguments to a function
     * Some basic examples of functions
-* Loops
+* [Loops](#Loops) 
     * What is a loop
     * Looping through an array
     * Creating an array of objects and iterate over it, display relevant information
-* Async/Sync
+* [Async/Sync](#async/sync)
     * What is asynchronous code
     * What is synchronous code
     * A basic example of asynchronous code
@@ -224,7 +224,7 @@ Okay let's break down what just happened:
 * Within the curly braces, we log the `users` array. Since we are incrementing the value of `i` every time the loop is true, and since arrays start at `0`, we know what our key will be each iteration, so we just pass `i` as the key: `users[i]`. As soon as the condition is false, the loop will stop.   
 Have a look at the [loops.js](loops.js) file for more examples!
 
-### Async
+### Async/Sync
 [Source Code](async.js)   
 [Learn More](https://eloquentjavascript.net/11_async.html) 
 
