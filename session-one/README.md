@@ -52,8 +52,7 @@ Primitives are also immutable. They cannot be altered. You can reassign the vari
 [Learn more about primitives here](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) (notice I left out the type of symbol? That is new to JavaScript, you can ignore that for now!).  
 
 **Objects**   
-Objects are a data structure containting data and instructions on how to work with the data.   
-Objects have propeties, which have a name (key) and a value. The value can be different data types, and even a function (which is typically called a method if referenced inside of an object).   
+Objects are a data structure containing data and instructions on how to work with the data. Objects have properties, which have a name (key) and a value. The value can be different data types, and even a function (which is typically called a method if referenced inside of an object).   
 Objects in JavaScript are similar to objects in real life! Let's create an object scenario:   
 I have a car. The car is the object! The car is made up of key information (properties) such as `make, model, colour, seats`. These keys have values such as black, 5 etc. Let's make our object!
 
@@ -93,7 +92,7 @@ We as humans do this everyday - If we want coffee from a coffee shop, we first c
 Another example? When we're commuting to work on the train, each time the train stops, we quickly check if it is our stop. If it is our stop, we get off the train. If it is not our stop, we remain on the train until it is our stop!   
 
 The most commonly used way of doing conditional statements is using `if/else`. Let's understand `if` first:   
-To write an if conditional statement, we first write `if`, followed by parentheses: `if()`. Within the parentheses is where we check if a conditon is `true` or `false`. After the parentheses, we have a set of curly braces, which we write our code in that will only be executed if the conditon is met!   
+To write an if conditional statement, we first write `if`, followed by parentheses: `if()`. Within the parentheses is where we check if a condition is `true` or `false`. After the parentheses, we have a set of curly braces, which we write our code in that will only be executed if the condition is met!   
 
 **Let's write some example:**   
 Remember we spoke about Booleans? A simple variable with a Boolean value will work great for this example. First, let's create the variable.
@@ -107,7 +106,7 @@ if(employed) {
     console.log('You are employed!');
 }
 ```
-If you ran both snippets of code, you will get the message `You are employed!`. The `if` statmenet is checking if the value passed is true or false. But what if you weren't employed? Nothing would print... This is where `else` comes in. Let's amend the code above:
+If you ran both snippets of code, you will get the message `You are employed!`. The `if` statement is checking if the value passed is true or false. But what if you weren't employed? Nothing would print... This is where `else` comes in. Let's amend the code above:
 ```JavaScript
 if(employed) {
     console.log('You are employed!');
@@ -132,7 +131,7 @@ if(colour == 'blue') {
 ```
 Since we set the colour as red, if you run these snippets you will have a message saying `Users favourite colour is red!`.   
 Notice I used `==` this time? Let's talk about Comparison Operators!   
-**Comparison Operators** are used in conditonal statements to determine equality or difference between variables or values. Here is a table of different comparison operators:   
+**Comparison Operators** are used in conditional statements to determine equality or difference between variables or values. Here is a table of different comparison operators:   
 
 | Operator | Description | Example|
 | --- | --- | --- |
@@ -205,12 +204,12 @@ Have a look at the [functions.js](functions.js) file for more examples!
 [Learn More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)  
 
 Loops are a quick and easy way to do something repeatedly. There are different types of loops for doing different things. A common and good starting loop is the `for` loop.  
-The `for` loop evaluates specified conditons until they're false. Let's create an example to illustrate how a `for` loop works.  
+The `for` loop evaluates specified conditions until they're false. Let's create an example to illustrate how a `for` loop works.  
 We have an array of users.
 ```JavaScript
 var users = ['Aaron', 'Ross', 'Steven'];
 ```
-We want to display each users name until there is no more users to show. Let's create the conditons!
+We want to display each users name until there is no more users to show. Let's create the conditions!
 ```JavaScript
 for(var i = 0; i < users.length; i++) {
     console.log(users[i]); // Will log Aaron, Ross, Steven
@@ -232,7 +231,7 @@ Have a look at the [loops.js](loops.js) file for more examples!
 It is common in software development to write code synchronously. Synchronous code is coordinated in time. Each line will be executed from top to bottom, and each line will have to finish executing before the next one can start. Sometimes synchronous code is the only valuable option. However, imagine if one of your lines of code could take a few seconds to finish executing... this could make a user have to wait for something to finish before seeing something else. This isn't good. This is where asynchronous programming comes in!   
 Asynchronous still executes line by line, but rather than waiting for the line to finish, it will pass the line of code to the event loop, and then will use an implicit `Promise` to return its result. This would allow for the rest of the application to continue without being blocked.   
  
-We humans typically perform tasks asynchronously to be a little more efficient. Let's look at another, real-life exmaple:   
+We humans typically perform tasks asynchronously to be a little more efficient. Let's look at another, real-life example:   
 
 It's dinner time! You are cooking tomato pasta tonight.   
 We know that the pasta takes 20 minutes to cook, and that the sauce takes 10 minutes to prepare and 10 minutes to cook.   
