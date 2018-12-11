@@ -39,3 +39,19 @@ Content to come....
 
 ### Session Three
 Content to come....
+
+## Resources
+If you find any resources that helped, please submit a pull request with the source added below!
+### Reading
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - I still use this all the time.   
+[JavaScript](https://www.javascript.com/try)  - Interactive tool to learn   
+[You Don't Know JS](https://github.com/getify/You-Dont-Know-JS) - We have these books in office!   
+[JavaScript.info](https://javascript.info/)   
+[FreeCodeCamp](https://www.freecodecamp.org/)   
+[w3schools](https://www.w3schools.com/js/)
+[12factor](https://12factor.net/)
+
+### YouTube channels
+[Programming with Mosh](https://www.youtube.com/user/programmingwithmosh)     
+[Traversy Media](https://www.youtube.com/user/TechGuyWeb)   
+[Learn Code](https://www.youtube.com/user/learncodeacademy)
