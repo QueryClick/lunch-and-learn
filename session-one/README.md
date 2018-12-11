@@ -20,7 +20,7 @@ In the first session, we covered a bunch of important areas. This file will cove
     * What is a loop
     * Looping through an array
     * Creating an array of objects and iterate over it, display relevant information
-* [Async/Sync](#async/sync)
+* [Async/Sync](#asyncsync)
     * What is asynchronous code
     * What is synchronous code
     * A basic example of asynchronous code
