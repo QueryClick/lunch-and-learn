@@ -9,7 +9,7 @@ Things you need installed first:
 1. [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 2. [Node.js](https://nodejs.org/en/download)
 
-You can verify these are installed by opening your terminal and typing `git -v` for Git, and `node -v` for Node.js. 
+You can verify these are installed by opening your terminal and typing `git -v` for Git, and `node -v` for Node.js. This will tell you the softwares version.
 
 **Installing Git:**   
 https://www.atlassian.com/git/tutorials/install-git
