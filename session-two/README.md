@@ -1,7 +1,6 @@
 # Lunch and Learn: Session Two
 
 ## !!Before session requirements!!
-*If you weren't at the session, skip this part.*
 
 In order to communicate with our API, we need to have a web server running. Fortunately, [Express.js](https://expressjs.com) makes this fast and simple so I have already done it for you. If you want to follow along with typing code at the session, you need to ensure you can run the web server!
 
