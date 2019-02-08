@@ -47,7 +47,7 @@ _env.js should **never** be committed or shared. It is ignored from Git._
 1. Within the `backend` directory, there is another directory named `config`. Within `config`, there is a file called `env.example.js`. simply rename this file to `env.js`.
 2. Within this file, change the string `mongodb://localhost:27017/blog` to your MongoDB URL. The next requirement will explain how to install MongoDB.
 
-**Install MongoDB**
+**Install MongoDB**   
 Our backend service uses MongoDB to store our blog posts to. Installing MongoDB is out of the scope of this session, but here are some tutorials on how to install to your OS. If you do have any questions, give me a shout!
 
 Windows - https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-windows/   
