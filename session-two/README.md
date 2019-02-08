@@ -24,7 +24,7 @@ An API can be used to run specific code when requested to.
 Like mentioned before, our scenario isn't the only way to use an API. We will also cover an API called [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), which provides an `interface` for fetching resources.
 
 ### HTTP Verbs
- > HTTP defines a set of request methods to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred as HTTP verbs.
+ > HTTP defines a set of request methods to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred as HTTP verbs. - MDN
 
 Let's go over some of them!
 #### GET
@@ -56,7 +56,13 @@ Say we're changing my email from `aaron@queryclick.com` to `aaron.welsh@querycli
 }
 ```
 If you failed to add the users `name`, it would be become `null` and you would then have this as a user:
-
+```JSON
+{
+    "id": 1,
+    "name": null,
+    "email": "aaron.welsh@queryclick.com"
+}
+```
 `PATCH` is not idempotent (but it is possible to make them idempotent). `PATCH` requires extra information to tell the API exactly what its operation is.   
 An example:   
 Say we're changing my email from `aaron@queryclick.com` to `aaron.welsh@queryclick.com`  
@@ -72,7 +78,7 @@ You would now have this as the user:
 ```JSON
 {
     "id": 1,
-    "name": null,
+    "name": "Aaron",
     "email": "aaron.welsh@queryclick.com"
 }
 ```
@@ -80,6 +86,13 @@ You would now have this as the user:
 ### DELETE
 `DELETE` is exactly as it sounds. You use a `DELETE` request to delete a resource. For example, if a user wanted to delete their account, we would use a `DELETE` request to remove their data.
 
+
+### Resources to learn more
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods   
+
+https://assertible.com/blog/7-http-methods-every-web-developer-should-know-and-how-to-test-them   
+
+https://www.restapitutorial.com/lessons/httpmethods.html   
 ### RESTful
 
 ### What is asynchronous code?
