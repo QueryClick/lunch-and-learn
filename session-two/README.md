@@ -1,10 +1,6 @@
 # Lunch and Learn: Session Two
 
-## !!Before session requirements!!
-
-In order to communicate with our API, we need to have a web server running. Fortunately, [Express.js](https://expressjs.com) makes this fast and simple so I have already done it for you. If you want to follow along with typing code at the session, you need to ensure you can run the web server!
-
-Things you need installed first:
+## Requirements
 1. [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 2. [Node.js](https://nodejs.org/en/download)
 
@@ -16,20 +12,56 @@ https://www.atlassian.com/git/tutorials/install-git
 **Installing Node.js:**  
 Node.js is typically just an installer that has an installation wizard - https://nodejs.org/en/download/
 
-**If you have any questions or concerns about this, please contact me before the session.**. I can't promise to have time to help during the session.
+## Downloading, installing and running the application.
+The application is split up into two parts:   
+1. Frontend - Where we will make our API calls to display data
+2. Backend -  Where the API routes are defined
 
-### Downloading, installing and running the application.
+### Downloading source code
 1. Clone this repository and CD to it:
     > `git clone https://github.com/QueryClick/lunch-and-learn.git && cd lunch-and-learn`
 2. CD (change directory) to the session two directory
     > `cd session-two`
-3. Install packages needed:
+
+### Installing and running the application.
+If you've followed the previous steps and are within the directory `session-two`:
+1. Install dependencies
     > `npm i`
-4. Once installed, start the application:
-    > `npm start`
-5. Navigate to [http://localhost:8080](http://localhost:8080) or click the link in your terminal. If you changed the port, please replace port `8080` with the new port at the end of the URL.
 
-**You should this in your browser:**
-![screenshot of application frontend](screenshots/myblog.png)
+[**The next part you will need two terminals open**](https://giphy.com/gifs/RyXVu4ZW454IM)
 
-If you cannot get Git installed or working, you can [download the zip here](https://github.com/QueryClick/lunch-and-learn/archive/master.zip).
+#### Frontend
+To start the frontend service, run the following command:
+> `npm run frontend`
+
+You should have a message in your terminal saying
+> Frontend running on port http://localhost:8080
+
+**Please note** that if you make any changes outside of the directory `public`, you will have to stop your console (typically `ctrl + c`) and start it again (`npm run frontend`). Otherwise, your code will not be updated.
+
+#### Backend
+**Before you start your backend service, we need to do a few things!**
+
+**Create an `env.js` file**:   
+_env.js should **never** be committed or shared. It is ignored from Git._
+1. Within the `backend` directory, there is another directory named `config`. Within `config`, there is a file called `env.example.js`. simply rename this file to `env.js`.
+2. Within this file, change the string `mongodb://localhost:27017/blog` to your MongoDB URL. The next requirement will explain how to install MongoDB.
+
+**Install MongoDB**
+Our backend service uses MongoDB to store our blog posts to. Installing MongoDB is out of the scope of this session, but here are some tutorials on how to install to your OS. If you do have any questions, give me a shout!
+
+Windows - https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-windows/   
+Mac - https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-os-x/   
+Linux - https://docs.mongodb.com/v3.2/administration/install-on-linux/   
+OR, you could create a free one at Atlas - https://www.mongodb.com/cloud/atlas#faq and then just use that instance.
+
+To start the frontend service, run the following command:
+> `npm run backend`
+
+You should have a message in your terminal saying
+> Backend service running on port 3000
+
+**Please note** that if you make any changes to the backend, you will have to stop your console (typically `ctrl + c`) and start it again (`npm run backend`). Otherwise, your code will not be updated.
+
+## Documentation
+To come...
