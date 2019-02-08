@@ -228,8 +228,8 @@ This happens because the `const` (same with `let`) is unique in the sense of tha
 ```JavaScript
 var name = 'Aaron';
 function whoami() {
-	var name = 'John';
-	console.log(name)
+    var name = 'John';
+    console.log(name)
 }
 whoami();
 console.log(name)
@@ -249,7 +249,7 @@ Let's look at some examples:
 **Function()**:
 ```JavaScript
 function name() {
-	console.log('My name is Aaron');
+    console.log('My name is Aaron');
 }
 name();
 ```
@@ -259,7 +259,7 @@ Output:
 **Arrow Function Expression**   
 ```JavaScript
 const name = () => {
-	console.log('Hello, my name is Aaron');
+    console.log('Hello, my name is Aaron');
 }
 name();
 ```
@@ -271,7 +271,6 @@ Although they look like they do the same thing, they have some significant diffe
 
 ```JavaScript
 const person = {
-
     firstName: 'Aaron',
     lastName: 'Welsh',
     fullName: function() {
@@ -286,7 +285,6 @@ Output:
 What would happen if we removed the `this`?   
 ```JavaScript
 const person = {
-
     firstName: 'Aaron',
     lastName: 'Welsh',
     fullName: function() {
@@ -304,7 +302,6 @@ Let's do the same code, but use an arrow function:
 
 ```JavaScript
 const person = {
-
     firstName: 'Aaron',
     lastName: 'Welsh',
     fullName: () => {
