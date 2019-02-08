@@ -35,7 +35,18 @@ The code and documentation from the first session can be viewed [here](session-o
     * A basic example of asynchronous code
 
 ### Session Two
-Content to come....
+The code and documentation from the second session can be viewed [here](session-two). 
+
+**Outline of the second session**: 
+
+* What is an API?
+* How you access an API (HTTP verbs overview).
+* What are Promises?
+* What are Arrow Function Expressions
+* Writing some code that will bring back data from an API
+* Working with JSON
+* Displaying the data we need to our browser.
+
 
 ### Session Three
 Content to come....

@@ -11,6 +11,23 @@ This file has three parts:
 ## Documentation
 I have commented almost all lines of code for this session within its file as it would take **way** too long type it all here. Please feel free to go through each file and look at those comments!
 
+* [What is an API?](#what-is-an-api)
+* [HTTP Verbs](#http-verbs)
+    * [GET](#get)
+    * [POST](#post)
+    * [PUT](#put)
+    * [PATCH](#patch)
+    * [DELETE](#delete)
+* [RESTful](#restful)
+* [What is asynchronous code?](#what-is-asynchronous-code)
+* [What is a Promise](#what-is-a-promise)
+    * [Promise examples](#some-promise-examples)
+* [Why use const and let](#why-use-const-and-let)
+    * [const](#const)
+    * [let](#let)
+    * [Block-scope](#so-what-is-this-block-scope-you-speak-of)
+* [Arrow Function Expression](#arrow-function-expression)
+
 ### What is an API?
 An Application Programming Interface, or more commonly known as an API, is a way of communicating with an application. In our scenario, an API is a way of communicating with a service via HTTP on many routes, and getting a response based on those routes. In simple terms, an API handles requests and sends a responses.   
 
