@@ -92,9 +92,16 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
 
 https://assertible.com/blog/7-http-methods-every-web-developer-should-know-and-how-to-test-them   
 
-https://www.restapitutorial.com/lessons/httpmethods.html   
-### RESTful
+https://www.restapitutorial.com/lessons/httpmethods.html  
 
+### RESTful
+Representational State Transfer (REST) refers to a group of software architecture design constraints that bring about efficient, reliable, and scalable distributed systems. A system is called RESTful when it adheres to those constraints.
+
+The basic idea of REST is that a resource, e.g. a document, is transferred with its state and relationships (hypertext) via well-defined, standardized operations and formats. Often API's or services call themselves RESTful when they directly modify  a type of document as opposed to triggering actions elsewhere.
+
+Because HTTP, the standard protocol behind the Web, also transfers documents and hypertext links, simple HTTP APIs are sometimes colloquially referred to as RESTful APIs, RESTful services, or simply REST services, although they don't necessarily adhere to all REST constraints. Beginners can assume a REST API means an HTTP service that can be called using standard web libraries and tools.
+
+[Source](https://developer.mozilla.org/en-US/docs/Glossary/REST)
 ### What is asynchronous code?
 [Learn More](https://eloquentjavascript.net/11_async.html) 
 
@@ -173,6 +180,8 @@ Output (as an error):
 
 Within this session, we use `Promises` to try and get data from our API. If we can successfully get the data (it resolves), we will do something within `.then()`. If we get an error (rejects) because the new blog post couldn't be created as the database was down, we handle that within the `.catch()`. This is very useful for letting a user know that their post couldn't be created!
 
+[Learn more about Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+
 ### Why use const and let
 In the previous session we used `var` to assign data to a variable. In this session, we use [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) and sometimes [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let). Cool, but why?   
 
@@ -232,8 +241,83 @@ The output:
 **So what does this all mean?**   
 Unless you have a very good reason to use `var` (which I doubt), you should use `const` and `let`. As a JavaScript developer, I always use `const` UNLESS I know I will have to change the value of a variable at some point; I would then use `let`.
 
+Learn more about [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) and [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let). 
 ### Arrow Function Expression
+An arrow function (also called a fat arrow) is just a compact alternative to the `function()` syntax that we used in that last session and within some of this session.  
+Let's look at some examples:
 
+**Function()**:
+```JavaScript
+function name() {
+	console.log('My name is Aaron');
+}
+name();
+```
+Output:   
+> My name is Aaron
+
+**Arrow Function Expression**   
+```JavaScript
+const name = () => {
+	console.log('Hello, my name is Aaron');
+}
+name();
+```
+Output:   
+> Hello, my name is Aaron
+
+Although they look like they do the same thing, they have some significant differences that could catch you out! The main one I will cover is `this` keyword. But first, let's get a basic understanding of what `this` means.   
+`this` refers to the object that it belongs to. Let's create an example object to use `this` within:
+
+```JavaScript
+const person = {
+
+    firstName: 'Aaron',
+    lastName: 'Welsh',
+    fullName: function() {
+        return this.firstName + ' ' + this.lastName;
+    }
+};
+console.log(person.fullName());
+```
+Output: 
+> Aaron Welsh
+
+What would happen if we removed the `this`?   
+```JavaScript
+const person = {
+
+    firstName: 'Aaron',
+    lastName: 'Welsh',
+    fullName: function() {
+        return firstName + ' ' + lastName;
+    }
+};
+console.log(person.fullName());
+```
+Output: 
+> Uncaught ReferenceError: firstName is not defined
+
+This (pun intended?) error happens because the function for `fullName` doesn't know of `firstName` and `lastName`.
+
+Let's do the same code, but use an arrow function:
+
+```JavaScript
+const person = {
+
+    firstName: 'Aaron',
+    lastName: 'Welsh',
+    fullName: () => {
+        return this.firstName + ' ' + this.lastName;
+    }
+};
+console.log(person.fullName());
+```
+Output:
+> undefined undefined  
+
+We get `undefined undefined` because within this scope, it has no clue what `firstName` and `lastName` is! Functions define their own `this` value. However, arrow functions do not bind `this`, but is bound lexically by keeping the meaning from its original context.  
+You can learn more about arrow functions [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 ## Requirements
 1. [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 2. [Node.js](https://nodejs.org/en/download)
