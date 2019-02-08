@@ -15,7 +15,6 @@ class CreateRoutes extends Routes {
                 const connection = this.connection;
                 const col = await connection.db().collection('posts');
                 const { title, content } = req.body;
-                console.log(title, content)
                 const data = {
                     title,
                     content
