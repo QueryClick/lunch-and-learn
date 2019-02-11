@@ -1,7 +1,7 @@
 # Lunch and Learn: Session Two
 
 ## Disclaimer
-The code in this repository was developed for a training session within QueryClick. Feel free to use the code, but you probably shouldn't use anything in production before testing. This was all created for training and was developed quickly.
+The code in this repository was developed for a training session within QueryClick. Feel free to use the code, but you **shouldn't** use anything in production before testing. This was all created for training and was developed quickly.
 
 This file has three parts:   
 1. [Documentation](#Documentation)
@@ -33,7 +33,7 @@ An Application Programming Interface, or more commonly known as an API, is a way
 
 **Example:**   
 We search Google for the current weather in Glasgow.   
-Google takes your request, and sends its own request to an external API called “wunderground”.   
+Google takes your request, and sends its own request to an external API called “Wunderground”.   
 Wundergorund takes in the request and responds with the weather data.   
 Google then takes that response of weather data, and displays it to you in a wee nice snippet.  
 An API can be used to run specific code when requested to.   
@@ -123,7 +123,7 @@ Because HTTP, the standard protocol behind the Web, also transfers documents and
 [Learn More](https://eloquentjavascript.net/11_async.html) 
 
 It is common in software development to write code synchronously. Synchronous code is coordinated in time. Each line will be executed from top to bottom, and each line will have to finish executing before the next one can start. Sometimes synchronous code is the only valuable option. However, imagine if one of your lines of code could take a few seconds to finish executing... this could make a user have to wait for something to finish before seeing something else. This isn't good. This is where asynchronous programming comes in!   
-Asynchronous still executes line by line, but rather than waiting for the line to finish, it will pass the line of code to the event loop, and then will use an implicit `Promise` to return its result. This would allow for the rest of the application to continue without being blocked.   
+Asynchronous still executes line by line, but rather than waiting for the line to finish, it will pass the line/block of code to the event loop, and then will use an implicit `Promise` to return its result. This would allow for the rest of the application to continue without being blocked.   
  
 We humans typically perform tasks asynchronously to be a little more efficient. Let's look at another, real-life example:   
 
@@ -170,7 +170,7 @@ Output:
 So what did we actually just do there? Good question!
 
 1. We created a new Promise and assigned it to a variable named `myPromise`. This promise has two arguments passed within it - `resolve` and `reject`.
-2. Within this Promise, we created a [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) that will execute code within its callback after 2 seconds (2000 milliseconds).
+2. Within this Promise, we created a [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) that will execute code within its callback after 2 seconds (2000 milliseconds). Imagine this [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) was an API call to large/slow data.
 3. Within this callback, we use the passed argument `resolve` to resolve the `Promise` with the string `this will resolve in 2 seconds...`
 4. We then call `myPromise` variable with a `.then()` attached to it and within its callback, we console log the value returned (the string above).
 
@@ -276,12 +276,12 @@ Output:
 **Arrow Function Expression**   
 ```JavaScript
 const name = () => {
-    console.log('Hello, my name is Aaron');
+    console.log('My name is Aaron');
 }
 name();
 ```
 Output:   
-> Hello, my name is Aaron
+> My name is Aaron
 
 Although they look like they do the same thing, they have some significant differences that could catch you out! The main one I will cover is `this` keyword. But first, let's get a basic understanding of what `this` means.   
 `this` refers to the object that it belongs to. Let's create an example object to use `this` within:
@@ -347,7 +347,9 @@ Node.js is typically just an installer that has an installation wizard - https:/
 ## Downloading, installing and running the application.
 The application is split up into two parts:   
 1. Frontend - Where we will make our API calls to display data
-2. Backend -  Where the API routes are defined
+2. Backend -  Where the API routes are defined   
+
+**Again, please note**: The backend service was developed quickly for a training session at QueryClick. It is not suitable for a production application but can be a starting point! For example, the `POST` route doesn't validate and sanitise user input. Please use at your own risk. 
 
 ### Downloading source code
 1. Clone this repository and CD to it:
@@ -369,7 +371,7 @@ To start the frontend service, run the following command:
 You should have a message in your terminal saying
 > Frontend running on port http://localhost:8080
 
-**Please note** that if you make any changes outside of the directory `public`, you will have to stop your console (typically `ctrl + c`) and start it again (`npm run frontend`). Otherwise, your code will not be updated.
+**Please note** that if you make any changes outside of the directory `public`, you will have to stop your node process from your terminal (typically `ctrl + c`) and start it again (`npm run frontend`). Otherwise, your code will not be updated.
 
 #### Backend
 **Before you start your backend service, we need to do a few things!**
@@ -393,4 +395,4 @@ To start the frontend service, run the following command:
 You should have a message in your terminal saying
 > Backend service running on port 3000
 
-**Please note** that if you make any changes to the backend, you will have to stop your console (typically `ctrl + c`) and start it again (`npm run backend`). Otherwise, your code will not be updated.
+**Please note** that if you make any changes to the backend, you will have to stop your node process from your terminal (typically `ctrl + c`) and start it again (`npm run backend`). Otherwise, your code will not be updated.
