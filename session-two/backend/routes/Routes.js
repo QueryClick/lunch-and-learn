@@ -9,10 +9,10 @@ const { mongo_url } = require('../config/env');
 
 class Routes {
     constructor() {
-        this.connection = null;
-        this.getConnection();
-        this.router = router;
-        this.ObjectID = ObjectID;
+        this.connection = null; // Connection null by default.
+        this.getConnection(); // Attempt to get a connection.
+        this.router = router; // Create a property of the router instance we're using from Express.
+        this.ObjectID = ObjectID; // Assign MongoDBs `ObjectID` to this property. 
     }
 
     /**
@@ -20,8 +20,8 @@ class Routes {
      */
     async createConnection() {
         try {
-            const database = new Database();
-            this.connection = await database.connect(mongo_url);
+            const database = new Database(); // Get a new instance of our database.
+            this.connection = await database.connect(mongo_url); // Create a connection with your specified MongoDB URL.
             return this.connection;
         } catch (err) {
             console.error(err);

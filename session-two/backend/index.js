@@ -24,6 +24,7 @@ app.use('/api', [getRoutes.getBlogPosts(), getRoutes.getBlogPostByID()]);
 app.use('/api/create', createRoutes.createBlogPost());
 app.use('/api/delete', deleteRoutes.deleteBlogPost());
 
+// Start our backend service.
 app.listen(port, () => {
     console.log(`Backend service running on port ${port}`);
 });

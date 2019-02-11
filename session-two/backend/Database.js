@@ -9,6 +9,9 @@ class Database {
         this.db = null;
     }
 
+    /**
+     * @description Connect to MongoDB.
+     */
     async connect(databaseURL) {
         try {
             const connection = await MongoClient.connect(databaseURL, { useNewUrlParser: true });

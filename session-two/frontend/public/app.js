@@ -10,7 +10,7 @@ function iterateResponseAndPrintToBody(apiResponse) {
     const blogPost = document.getElementById('blog-posts'); //  <div id="blog-posts"></div> 
     blogPost.innerHTML = ''; // Make sure it's empty.
 
-    // Since our response from the API is an array of obecjts, we can just iterate through them!
+    // Since our response from the API is an array of objects, we can just iterate through them!
     apiResponse.responseData.forEach((blog) => {
     
         // First, let's create a title with a link for each blog post.
@@ -94,7 +94,7 @@ function createPost() {
 		})
 		.catch((err) => {
 			console.error(err);
-		})
+		});
 }
 
 /**
